@@ -1,4 +1,4 @@
 SELECT
-    (FirstName || ' ' || Customer.LastName), Country
+    (FirstName || ' ' || Customer.LastName)
 FROM Customer
 WHERE Country='Brazil';
