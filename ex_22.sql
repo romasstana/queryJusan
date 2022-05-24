@@ -1,4 +1,3 @@
-SELECT Country, count(I.InvoiceId) from Customer
-join Invoice I on Customer.CustomerId = I.CustomerId
-group by Country
-order by count(I.InvoiceId) desc;
+SELECT billingCountry, sum(total) as sellings from invoice
+group by billingCountry
+order by sellings desc;
