@@ -1,7 +1,5 @@
-SELECT T.name, Quantity from InvoiceLine
-join Track T on T.TrackId = InvoiceLine.TrackId
-join Invoice I on I.InvoiceId = InvoiceLine.InvoiceId
-where strftime('%Y', InvoiceDate)='2013'
+SELECT T.name, count(I.Quantity) from Track t
+join InvoiceLine I on T.TrackId = I.TrackId
 group by T.Name
-order by Quantity desc
+order by count(I.Quantity) desc
 limit 5;
