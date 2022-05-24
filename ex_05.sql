@@ -1,1 +1,1 @@
-SELECT DISTINCT BillingCountry from Invoice order by BillingCountry;
+SELECT DISTINCT BillingCountry from Invoice;
